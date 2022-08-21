@@ -30,6 +30,10 @@ extern "C" {
 #include <wlr/backend.h>
 #include <wlr/types/wlr_output.h>
 #include <wlr/types/wlr_input_device.h>
+#include <wlr/types/wlr_output_damage.h>
+#include <wlr/util/region.h>
+#include <wlr/types/wlr_screencopy_v1.h>
+
 #define static
 #include <wlr/types/wlr_compositor.h>
 #include <wlr/render/wlr_renderer.h>
@@ -38,6 +42,22 @@ extern "C" {
 #include <wlr/render/egl.h>
 #include <wlr/types/wlr_matrix.h>
 #undef static
+
+// Types
+#define static
+#include <wlr/types/wlr_scene.h>
+#undef static
+
+// Output management
+#include <wlr/types/wlr_output_layout.h>
+#include <wlr/types/wlr_output_management_v1.h>
+
+// Input
+#include <wlr/types/wlr_seat.h>
+#include <wlr/types/wlr_cursor.h>
+#include <wlr/types/wlr_xcursor_manager.h>
+#include <wlr/xcursor.h>
+#include <wlr/types/wlr_data_device.h>
 }
 
 #endif

@@ -47,10 +47,20 @@ private:
 
     // wlroots
     wlr_backend *wlr_backend_;
-    wlr_session *wlr_session_;
-    wlr_allocator *wlr_allocator_;
     wlr_renderer *wlr_renderer_;
+    wlr_allocator *wlr_allocator_;
     wlr_compositor *wlr_compositor_;
+    wlr_session *wlr_session_;
+
+    wlr_output_layout *wlr_output_layout_;
+    wlr_scene *wlr_scene_;
+
+    // Seat
+    wlr_seat *default_seat_;
+    wl_client *default_seat_client_;
+
+    wlr_cursor *wlr_cursor_;
+    wlr_xcursor_manager *wlr_xcursor_mgr_;
 
     int drm_fd_;
 

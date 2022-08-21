@@ -23,51 +23,18 @@
  * SOFTWARE.
  */
 
-#ifndef COMPOSITOR_H_
-#define COMPOSITOR_H_
+#ifndef EVENTS_H_
+#define EVENTS_H_
 
 #include <iostream>
-#include <memory>
 
 #include "include/wlroots_full.h"
 
-namespace server {
+namespace core {
 
-class Events;
-class Compositor {
-public:
-    Compositor();
-    ~Compositor();
-
-    void start();
-
-private:
-    // wayland
-    wl_display *wl_display_;
-    wl_event_loop *wl_event_loop_;
-
-    // wlroots
-    wlr_backend *wlr_backend_;
-    wlr_renderer *wlr_renderer_;
-    wlr_allocator *wlr_allocator_;
-    wlr_compositor *wlr_compositor_;
-    wlr_session *wlr_session_;
-
-    wlr_output_layout *wlr_output_layout_;
-    wlr_scene *wlr_scene_;
-
-    // Seat
-    wlr_seat *default_seat_;
-    wl_client *default_seat_client_;
-
-    wlr_cursor *wlr_cursor_;
-    wlr_xcursor_manager *wlr_xcursor_mgr_;
-
-    server::Events *events_;
-
-    int drm_fd_;
-
-    const char *wl_display_socket_;
+class Cursor {
+    public:
+        Cursor();
 };
 
 }

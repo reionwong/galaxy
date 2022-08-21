@@ -24,6 +24,7 @@
  */
 
 #include "compositor.h"
+#include "events.h"
 
 namespace server {
 

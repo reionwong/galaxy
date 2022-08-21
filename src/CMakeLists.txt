@@ -1,6 +1,7 @@
 set(MAIN_SRCS
   main.cpp
   compositor.cpp
+  events.cpp
   utils/command_line_helper.cpp
 )
 

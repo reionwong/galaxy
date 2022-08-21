@@ -23,18 +23,21 @@
  * SOFTWARE.
  */
 
-#ifndef COMMAND_LINE_HELPER_H_
-#define COMMAND_LINE_HELPER_H_
+#ifndef WLROOTS_FULL_H_
+#define WLROOTS_FULL_H_
 
-#include <iostream>
-
-namespace utils {
-
-class CommandLineHelper {
-    public:
-        CommandLineHelper(int &argc, char *argv[]);
-};
-
+extern "C" {
+#include <wlr/backend.h>
+#include <wlr/types/wlr_output.h>
+#include <wlr/types/wlr_input_device.h>
+#define static
+#include <wlr/types/wlr_compositor.h>
+#include <wlr/render/wlr_renderer.h>
+#include <wlr/render/allocator.h>
+#include <wlr/render/gles2.h>
+#include <wlr/render/egl.h>
+#include <wlr/types/wlr_matrix.h>
+#undef static
 }
 
 #endif
